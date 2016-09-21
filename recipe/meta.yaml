@@ -1,4 +1,6 @@
-{% set version = "1.1.2" %}
+{% set version = "1.2.2" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "8e7fb9f9301039c36fb0ff0a004ec36705ac46cee99a7373694a838adc8d30b0" %}
 
 package:
   name: tzlocal
@@ -7,7 +9,8 @@ package:
 source:
   fn: tzlocal-{{ version }}.tar.gz
   url: https://github.com/regebro/tzlocal/archive/{{ version }}.tar.gz
-  sha256: 939de4cf9535f61a5c1a99f34a447e3992f8046fd1bedeac9ec7892b419cf963
+  {{ hash_type }}: {{ hash_val }}
+
 
 build:
   number: 0
@@ -34,7 +37,9 @@ test:
 about:
   home: https://github.com/regebro/tzlocal
   license: CC0 1.0 Universal
+  license: LICENSE.txt
   summary: 'tzinfo object for the local timezone'
+  dev_url: https://github.com/regebro/tzlocal
 
 extra:
   recipe-maintainers:
