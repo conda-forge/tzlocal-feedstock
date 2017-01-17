@@ -33,7 +33,7 @@ test:
 about:
   home: https://github.com/regebro/tzlocal
   license: CC0 1.0 Universal
-  license: LICENSE.txt
+  license_file: LICENSE.txt
   summary: 'tzinfo object for the local timezone'
   dev_url: https://github.com/regebro/tzlocal
 

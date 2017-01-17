@@ -3,7 +3,7 @@ About tzlocal
 
 Home: https://github.com/regebro/tzlocal
 
-Package license: LICENSE.txt
+Package license: CC0 1.0 Universal
 
 Feedstock license: BSD 3-Clause
 
