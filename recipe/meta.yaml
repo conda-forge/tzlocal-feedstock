@@ -1,25 +1,22 @@
-{% set name = "tzlocal" %}
-{% set version = "1.4" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "d3cdf502a4ae4b566abf948924e837b6c354aaed082eb1326c6c9043824cb4a7" %}
+{% set version = "1.5.1" %}
 
 package:
-  name: {{ name }}
+  name: tzlocal
   version: {{ version }}
 
 source:
-  fn: tzlocal-{{ version }}.tar.gz
-  url: https://github.com/regebro/tzlocal/archive/{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/t/tzlocal/tzlocal-{{ version }}.tar.gz
+  sha256: 4ebeb848845ac898da6519b9b31879cf13b6626f7184c496037b818e238f2c4e
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
