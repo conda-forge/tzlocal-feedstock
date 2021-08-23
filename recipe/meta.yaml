@@ -9,7 +9,7 @@ source:
   sha256: f4e6e36db50499e0d92f79b67361041f048e2609d166e93456b50746dc4aef12
 
 build:
-  number: 1
+  number: 2
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<36]
 
@@ -25,10 +25,15 @@ requirements:
   run:
     - python
     - backports.zoneinfo  # [py<39]
+    - python-tzdata  # [win]
 
 test:
+  requires:
+    - pip
   imports:
     - tzlocal
+  commands:
+    - pip check
 
 about:
   home: https://github.com/regebro/tzlocal
