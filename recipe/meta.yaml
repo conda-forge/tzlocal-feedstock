@@ -26,6 +26,7 @@ requirements:
     - python
     - backports.zoneinfo  # [py<39]
     - python-tzdata  # [win]
+    - pytz-deprecation-shim
 
 test:
   requires:
