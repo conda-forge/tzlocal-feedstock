@@ -1,4 +1,4 @@
-{% set version = "4.1" %}
+{% set version = "4.2" %}
 
 package:
   name: tzlocal
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/tzlocal/tzlocal-{{ version }}.tar.gz
-  sha256: 0f28015ac68a5c067210400a9197fc5d36ba9bc3f8eaf1da3cbd59acdfed9e09
+  sha256: ee5842fa3a795f023514ac2d801c4a81d1743bbe642e3940143326b3a00addd7
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<36]
 
