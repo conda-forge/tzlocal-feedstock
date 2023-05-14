@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<36]
+  skip: true  # [py<37]
 
 requirements:
   build:
@@ -26,7 +26,6 @@ requirements:
     - python
     - backports.zoneinfo  # [py<39]
     - python-tzdata  # [win]
-    - pytz-deprecation-shim
 
 test:
   requires:
