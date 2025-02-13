@@ -1,17 +1,17 @@
-{% set version = "5.2" %}
+{% set version = "5.3" %}
 
 package:
   name: tzlocal
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/tzlocal/tzlocal-{{ version }}.tar.gz
-  sha256: 8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e
+  url: https://pypi.org/packages/source/t/tzlocal/tzlocal-{{ version }}.tar.gz
+  sha256: 2fafbfc07e9d8b49ade18f898d6bcd37ae88ce3ad6486842a2e4f03af68323d2
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<37]
+  skip: true  # [py<39]
 
 requirements:
   build:
@@ -23,7 +23,6 @@ requirements:
     - setuptools >=64
   run:
     - python
-    - backports.zoneinfo  # [py<39]
     - python-tzdata  # [win]
 
 test:
