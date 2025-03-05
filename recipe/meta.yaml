@@ -11,23 +11,23 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<39]
+  noarch: python
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools >=64
   run:
-    - python
+    - python >={{ python_min }}
     - python-tzdata  # [win]
+    - __unix   # [unix]
+    - __win    # [win]
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - tzlocal
   commands:
