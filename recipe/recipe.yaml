@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "5.4"
+  version: "5.4.3"
 
 package:
   name: tzlocal
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/tzlocal/tzlocal-${{ version }}.tar.gz
-  sha256: 41e1293f80d4b5ff38dff222601a8fbd06b4fdcaf25e224704047ad26a39af54
+  sha256: 3a8c9bc18cf47e1dcde252ea0e6a72a6cde320a400b6ac6db1f1f8cccd553c00
 
 build:
   number: 0
