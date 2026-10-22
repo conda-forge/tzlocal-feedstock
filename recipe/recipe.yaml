@@ -35,7 +35,9 @@ tests:
       imports:
         - tzlocal
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: MIT
